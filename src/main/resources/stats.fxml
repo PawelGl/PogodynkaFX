@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pawelglowacz.weatherapp.controllers.StatsController">
+   <children>
+      <ListView fx:id="listOfCity" prefHeight="400.0" prefWidth="200.0" />
+      <BarChart fx:id="chartWeather" layoutX="200.0" layoutY="7.0" prefHeight="381.0" prefWidth="399.0" title="Pogoda">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button fx:id="buttonBack" layoutX="516.0" layoutY="14.0" mnemonicParsing="false" text="Powrot" />
+      <TextField fx:id="textFieldAverage" layoutX="327.0" layoutY="388.0" />
+      <Label layoutX="218.0" layoutY="392.0" text="Srednia temperatura" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pawelglowacz.weatherapp.controllers.MainController">
+   <children>
+      <Button fx:id="buttonZnajdzID" layoutX="404.0" layoutY="277.0" mnemonicParsing="false" text="ZNAJDZ" />
+      <TextField fx:id="textFieldiD" layoutX="243.0" layoutY="277.0" promptText="Wpisz miasto" />
+      <TextArea fx:id="textAreaID" editable="false" layoutX="50.0" layoutY="51.0" prefHeight="200.0" prefWidth="407.0" style="-fx-border-color: red;" />
+      <ProgressIndicator fx:id="progressLoad" layoutX="239.0" layoutY="151.0" visible="false">
+         <effect>
+            <Shadow />
+         </effect>
+      </ProgressIndicator>
+      <Button fx:id="buttonStatystyki" layoutX="505.0" layoutY="26.0" mnemonicParsing="false" text="Statystyki" />
+   </children>
+</AnchorPane>
