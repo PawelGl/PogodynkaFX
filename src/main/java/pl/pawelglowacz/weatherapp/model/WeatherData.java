@@ -4,6 +4,12 @@ package pl.pawelglowacz.weatherapp.model;
  * Created by Admin on 2017-08-21.
  */
 public class WeatherData {
+
+    private float temp;
+    private int humidity;
+    private int pressure;
+    private int clouds;
+
     public double getTemp() {
         return temp;
     }
@@ -36,10 +42,7 @@ public class WeatherData {
         this.clouds = clouds;
     }
 
-    private float temp;
-    private int humidity;
-    private int pressure;
-    private int clouds;
+
 
     public WeatherData(float temp, int humidity, int pressure, int clouds) {
         this.temp = temp;

@@ -27,19 +27,22 @@ public class WeatherService { //singleton
     private void parseJsonFromString(String text){
         WeatherData data= new WeatherData();
 
-        JSONObject root= new JSONObject(text);
-        JSONObject main=root.getJSONObject("main");
+        JSONObject root = new JSONObject(text);
+
+        JSONObject main = root.getJSONObject("main");
         data.setTemp((float)main.getDouble("temp"));
-        JSONObject clouds=root.getJSONObject("clouds");
+
+        JSONObject clouds = root.getJSONObject("clouds");
         data.setClouds(clouds.getInt("all"));
         data.setHumidity(main.getInt("humidity"));
         data.setPressure(main.getInt("pressure"));
+
         notifyObservers(data);
 
     }
 
     private WeatherService(){
-        service= Executors.newFixedThreadPool(2);
+        service = Executors.newFixedThreadPool(2);
         observerList=new ArrayList<>();
     }
 

@@ -48,18 +48,18 @@ public class StatsController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-
         registerButtonBack();
         loadCityname();
         registerCLickItemOnList();
-
     }
+
     private void registerCLickItemOnList(){
         listOfCity.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             loadChart((String)newValue);
             registerAverageTextField((String)newValue);
         });
     }
+
     private void loadChart(String city){
         XYChart.Series series1 =new XYChart.Series();
         series1.setName(city);
@@ -75,7 +75,7 @@ public class StatsController implements Initializable {
 
     private void registerButtonBack() {
         buttonBack.setOnMouseClicked(ClickMe->{
-            Stage stage =(Stage)buttonBack.getScene().getWindow();
+            Stage stage = (Stage)buttonBack.getScene().getWindow();
             Parent root = null;
             try {
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));

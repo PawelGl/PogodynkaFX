@@ -48,6 +48,7 @@ public class MainController implements IWeatherObserver, Initializable{
     private DataBaseConnection dataBaseConnection=DataBaseConnection.getService(); //polaczenie z baza
     private WeatherStatDao weatherStatDao=new WeatherStatDaoImpl(); //implementacja interfejsu ktory zawiera zapytania do bazy
     private String lastCityName; // string potrzebny do zapameitania miasta ktore wpisujemy
+
     @Override
     public void onWeatherUpdate(WeatherData data) {
         //textAreaID.setText();
@@ -67,8 +68,8 @@ public class MainController implements IWeatherObserver, Initializable{
     }
 
     private void registeSHowButtonAction(){
-        buttonZnajdzID.setOnMouseClicked(s -> {
-            lastCityName=textFieldiD.getText();
+        buttonZnajdzID.setOnMouseClicked( s -> {
+            lastCityName = textFieldiD.getText();
             weatherService.init(textFieldiD.getText());
         });
 
@@ -90,8 +91,8 @@ public class MainController implements IWeatherObserver, Initializable{
     }
 
     private void registerEnterListener(){
-        textFieldiD.setOnKeyPressed(e -> {
-            if(e.getCode()== KeyCode.ENTER){
+        textFieldiD.setOnKeyPressed( e -> {
+            if( e.getCode() == KeyCode.ENTER ){
                 lastCityName=textFieldiD.getText();
                 progressLoad.setVisible(true);
                 weatherService.init(textFieldiD.getText());

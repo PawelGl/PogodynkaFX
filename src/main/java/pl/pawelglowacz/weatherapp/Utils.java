@@ -10,13 +10,14 @@ import java.net.URL;
  */
 public class Utils {
     public static String readWebsiteContext(String url){
-        StringBuilder builder=new StringBuilder();
+        StringBuilder builder = new StringBuilder();
 
         try {
-            HttpURLConnection httpURLConnection =(HttpURLConnection)new URL(url).openConnection();
+            HttpURLConnection httpURLConnection = (HttpURLConnection)new URL(url).openConnection();
            InputStream inputStream = httpURLConnection.getInputStream();
            int resposne=0;
-           while((resposne=inputStream.read())!=-1) {
+
+           while((resposne = inputStream.read()) != -1) {
                 builder.append((char)resposne);
 
 

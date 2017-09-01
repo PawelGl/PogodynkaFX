@@ -4,6 +4,7 @@ package pl.pawelglowacz.weatherapp.model;
  * Created by Admin on 2017-08-30.
  */
 public class WeatherStat {
+
     private String cityname;
     private float temp;
 

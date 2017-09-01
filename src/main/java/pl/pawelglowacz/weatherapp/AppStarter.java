@@ -20,8 +20,6 @@ import java.util.Scanner;
  */
 public class AppStarter extends Application {
     public static void main(String[] args) {
-        // System.out.println(Utils.readWebsiteContext("http://api.openweathermap.org/data/2.5/weather?q=Cracow&appid=0b8ba4d76c953f66e439581efb4264c0" ));
-
         launch(args);
 
     }
@@ -33,6 +31,7 @@ public class AppStarter extends Application {
         primaryStage.setTitle("Pogodynka");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
+
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent e) {
